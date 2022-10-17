@@ -56,7 +56,6 @@ DELIMITER ;
 DELIMITER $$
  CREATE PROCEDURE pRemoverAluno(IN codigoInformado INT)
  BEGIN
-  DELETE FROM alunos_turmas WHERE Codigo_Aluno = codigoInformado;
   DELETE FROM alunos WHERE Codigo_Aluno = codigoInformado;
  END $$
 DELIMITER ;
@@ -64,8 +63,6 @@ DELIMITER ;
 DELIMITER $$
  CREATE PROCEDURE pRemoverTurma(IN codigoInformado INT)
  BEGIN
-  DELETE FROM alunos_turmas WHERE Codigo_Turma = codigoInformado;
-  DELETE FROM aulas WHERE Codigo_Turma = codigoInformado;
   DELETE FROM turmas WHERE Codigo_Turma = codigoInformado;
  END $$
 DELIMITER ;
@@ -76,8 +73,6 @@ DELIMITER $$
   DELETE FROM funcionarios WHERE Codigo_Funcionario = codigoInformado;
  END $$
 DELIMITER ;
-
-
 
 
 #TESTANDO PROCEDURES
@@ -98,9 +93,11 @@ CALL pAlterarTurma(1,'3A', 'Noturno');
 CALL pAlterarFuncionario(2, 'Alexandre', 'Porteiro', 1300);
 
 #TEST PROCEDURES DELETE 
-CALL pRemoverAluno(1);
-CALL pRemoverTurma(1);
+CALL pRemoverAluno(3);
+CALL pRemoverTurma(7);
 CALL pRemoverFuncionario(1);
+
+SELECT * FROM alunos_turmas;
 
 
 

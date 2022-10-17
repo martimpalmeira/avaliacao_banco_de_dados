@@ -1,7 +1,7 @@
 #Quantidade de funcionários com salário entre 1000 e 1500
 SELECT COUNT(*) AS Quantidade FROM funcionarios WHERE Salario_Funcionario BETWEEN 1000 AND 1500 ; 
 
-#Todas as aulas que estão acontecendo agora
+#Todas as aulas que estão acontecem nesse horário
 SELECT * FROM aulas WHERE DATE_FORMAT(Horario_Inicio, '%H') = DATE_FORMAT(NOW(), '%H');
 
 #Funcionário com o maior salário

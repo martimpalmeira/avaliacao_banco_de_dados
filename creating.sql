@@ -3,6 +3,7 @@ CREATE DATABASE avaliacao_banco_de_dados;
 CREATE TABLE professores(
 	Codigo_Professor INT PRIMARY KEY AUTO_INCREMENT,
     Nome_Professor VARCHAR(20)
+    
 );
 
 CREATE TABLE alunos(
@@ -14,8 +15,12 @@ CREATE TABLE materias(
 	Codigo_Materia INT PRIMARY KEY AUTO_INCREMENT,
     Codigo_Professor INT,
     Nome_Materia VARCHAR(20),
-    FOREIGN KEY(Codigo_Professor) REFERENCES professores(Codigo_Professor)
+    FOREIGN KEY(Codigo_Professor) REFERENCES professores(Codigo_Professor) 
+    
 );
+
+
+
 
 CREATE TABLE turmas(
 	Codigo_Turma INT PRIMARY KEY AUTO_INCREMENT,
@@ -30,6 +35,7 @@ CREATE TABLE alunos_turmas(
     FOREIGN KEY(Codigo_Aluno) REFERENCES alunos(Codigo_Aluno),
     FOREIGN KEY(Codigo_Materia) REFERENCES materias(Codigo_Materia),
     FOREIGN KEY(Codigo_Turma) REFERENCES turmas(Codigo_Turma)
+    
 );
 
 CREATE TABLE salas(
@@ -47,6 +53,7 @@ CREATE TABLE aulas(
     FOREIGN KEY(Codigo_Materia) REFERENCES materias(Codigo_Materia),
     FOREIGN KEY(Codigo_Turma) REFERENCES turmas(Codigo_Turma),
     FOREIGN KEY(Codigo_Sala) REFERENCES salas(Codigo_Sala)
+   
     
 );
 
