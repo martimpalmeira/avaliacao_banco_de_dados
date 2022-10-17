@@ -124,7 +124,6 @@ VALUES
 
 
 INSERT INTO aulas (Codigo_Turma, Codigo_Materia, Codigo_Sala, Horario_Inicio, Horario_Termino)
-
 VALUES
 (1,4,1, '07:00:00', '08:00:00'),
 (2,5,2, '08:00:00', '09:00:00'),
