@@ -57,6 +57,11 @@ CREATE TABLE funcionarios (
     Salario_Funcionario DOUBLE
 );
 
+CREATE TABLE escola (
+	Numero_Funcionarios INT
+);
+
+
 
 
 
