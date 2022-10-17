@@ -34,7 +34,7 @@ CREATE TABLE alunos_turmas(
 
 CREATE TABLE salas(
 	Codigo_Sala INT PRIMARY KEY AUTO_INCREMENT,
-    Nome_Sala VARCHAR(30)
+    Nome_Sala VARCHAR(50)
 );
 
 CREATE TABLE aulas(
@@ -42,11 +42,11 @@ CREATE TABLE aulas(
     Codigo_Turma INT,
     Codigo_Materia INT,
     Codigo_Sala INT,
-    Horario_Inicio DATE,
-    Horario_Termino DATE,
+    Horario_Inicio TIME,
+    Horario_Termino TIME,
     FOREIGN KEY(Codigo_Materia) REFERENCES materias(Codigo_Materia),
     FOREIGN KEY(Codigo_Turma) REFERENCES turmas(Codigo_Turma),
-    FOREIGN KEY(Codigo_Sala) REFERENCES turmas(Codigo_Sala)
+    FOREIGN KEY(Codigo_Sala) REFERENCES salas(Codigo_Sala)
     
 );
 
@@ -56,3 +56,9 @@ CREATE TABLE funcionarios (
     Cargo_Funcionario VARCHAR(30),
     Salario_Funcionario DOUBLE
 );
+
+
+
+
+
+
