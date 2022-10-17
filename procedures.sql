@@ -95,7 +95,7 @@ CALL pInserirFuncionario('João', 'Professor', 2000);
 #TEST PROCEDURES UPDATE 
 CALL pAlterarAluno(1,'Mariana');
 CALL pAlterarTurma(1,'3A', 'Noturno');
-CALL pAlterarFuncionario(1, 'Alexandre', 'Porteiro', 1300);
+CALL pAlterarFuncionario(2, 'Alexandre', 'Porteiro', 1300);
 
 #TEST PROCEDURES DELETE 
 CALL pRemoverAluno(1);
